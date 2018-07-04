@@ -1,27 +1,17 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     babel = require('gulp-babel'),
-    core = require('babel-core'),
     autoprefixer = require('gulp-autoprefixer')
 
 
-    gulp.task('autoprefixer', function () {
+    gulp.task('build:scss', function () {
         return gulp.src('src/scss/pages/*.scss')            
             .pipe(autoprefixer({
                 browsers: ['last 2 versions'],
                 cascade: false
             }))
+            .pipe (sass())
             .pipe(gulp.dest('public/css'));
-    });
-    
-   
- 
-    
-    gulp.task('build:scss', function() {
-        return gulp.src('src/scss/pages/*.scss')
-        .pipe (sass())
-        .pipe (gulp.dest('public/css'))
-    
     });
 
     gulp.task('build:js', function() {

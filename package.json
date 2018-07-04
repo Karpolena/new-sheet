@@ -14,10 +14,8 @@
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch",
-
     "build-linux": "node_modules/gulp/bin/gulp.js build",
     "watch-linux": "node_modules/gulp/bin/gulp.js watch"
-
   },
   "repository": {
     "type": "git",
